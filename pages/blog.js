@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const PostLink = (props)=>(
     <li>
-        <Link href={`single?title=${props.title}`}>
+        <Link as={`/single/${props.id}`} href={`single?title=${props.title}`}>
             <a>{props.title}</a>
         </Link>
     </li>
@@ -14,9 +14,9 @@ const Index1 = ()=>(
         <Layout>
             <h1>Welcom to Blog.js</h1>
             <ul>
-                <PostLink title='Blog Pertama' />
-                <PostLink title='Blog Kedua' />
-                <PostLink title='Blog ketiga' />
+                <PostLink id='blog-pertama' title='Blog Pertama' />
+                <PostLink id='blog-kedua' title='Blog Kedua' />
+                <PostLink id='penutupan-ketiga' title='Blog ketiga' />
             </ul>
         </Layout>
     </div>
