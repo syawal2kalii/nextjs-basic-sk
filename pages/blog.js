@@ -1,13 +1,12 @@
 import Link from "next/link";
+import Navigation from "../components/Navigation";
 
-export default function blog() {
-  return (
+const Index1 = ()=>(
     <div>
-      <div>
-        <h1>Welcom to Blog</h1>
-      </div>
-      <Link href="/blog"><a>Blog</a></Link>
-      <Link href="/"><a> Home</a></Link>
+        <Navigation/>
+        <h1>Welcom to Blog.js</h1>
+
     </div>
-  );
-}
+)
+
+export default Index1

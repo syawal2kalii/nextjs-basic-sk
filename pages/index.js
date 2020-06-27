@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Link from "next/link";
+import Navigation from "../components/Navigation";
 
-export default function Home() {
-  return (
+const Index2 = ()=>(
     <div>
-      <h1>Welcome to Next.js !!!</h1>
-      <Link href="/blog"><a>Blog</a></Link>
-      <Link href="/"><a> Home</a></Link>
+        <Navigation/>
+        <h1>Welcom to Index</h1>
+  
     </div>
-  )
-}
+)
+
+export default Index2
