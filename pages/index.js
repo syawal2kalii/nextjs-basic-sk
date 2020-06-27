@@ -1,11 +1,10 @@
-import Link from "next/link";
 import Navigation from "../components/Navigation";
-
+import Layout from '../components/BaseLayout'   
 const Index2 = ()=>(
     <div>
-        <Navigation/>
-        <h1>Welcom to Index</h1>
-  
+        <Layout>
+          <h1>Welcome to Index</h1>
+        </Layout>
     </div>
 )
 
