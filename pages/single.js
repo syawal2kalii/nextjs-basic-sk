@@ -1,21 +1,20 @@
 import {withRouter} from 'next/router'
 import Layout from '../components/BaseLayout'
-import Head from 'next/head'
+import fetch from 'isomorphic-unfetch'
 
-const Page = withRouter((props)=>(
+const Post   = withRouter((props)=>(
     <Layout>
-        <Head>
-            <title>halaman User</title>
-        </Head>
-        <h2>{props.router.query.title}</h2>
-        <p>Ini Konten Palsu</p>
-        <ul>
-            <li><a>Konten 1</a></li>
-            <li><a>Konten 2</a></li>
-            <li><a>Konten 3</a></li>
-        </ul>
-
+        <h2>{props.user.username}</h2>
+        <p>Nama lengkap : {props.user.name}</p>
     </Layout>
 ))
 
-export default Page
+Post.getInitialProps = async function(context) {
+    const {id} = context.query
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    const user = await res.json()
+
+    console.log('total data' + user.length)
+    return {user}
+}
+export default Post
