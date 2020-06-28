@@ -7,18 +7,26 @@ const PostLink = (props)=>(
         <Link as={`/single/${props.id}`} href={`single?title=${props.title}`}>
             <a>{props.title}</a>
         </Link>
+        <style jsx >{`
+            a{
+                color:red;
+            } 
+            `}
+        </style>
     </li>
 )
 const Index1 = ()=>(
     <div>
         <Layout>
-            <h1>Welcom to Blog.js</h1>
+            <h1>Welcome to Blog.js</h1>
             <ul>
                 <PostLink id='blog-pertama' title='Blog Pertama' />
                 <PostLink id='blog-kedua' title='Blog Kedua' />
                 <PostLink id='penutupan-ketiga' title='Blog ketiga' />
             </ul>
+            
         </Layout>
+        
     </div>
 )
 

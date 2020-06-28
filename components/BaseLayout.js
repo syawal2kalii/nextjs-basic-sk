@@ -11,6 +11,7 @@ const Layout = (props) => (
         <Navigation />
         {props.children}
         <p>Footer: copyright 2019</p>
+        
     </div>
 )
 export default Layout

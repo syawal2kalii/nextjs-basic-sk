@@ -9,6 +9,12 @@ const Page = withRouter((props)=>(
         </Head>
         <h2>{props.router.query.title}</h2>
         <p>Ini Konten Palsu</p>
+        <ul>
+            <li><a>Konten 1</a></li>
+            <li><a>Konten 2</a></li>
+            <li><a>Konten 3</a></li>
+        </ul>
+
     </Layout>
 ))
 
